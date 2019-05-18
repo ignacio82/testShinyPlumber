@@ -1,0 +1,15 @@
+Package: testShinyPlumber
+Title: Test Shiny and Plumber
+Version: 0.0.0.9000
+Authors@R: person('Ignacio', 'Martinez', email = 'ignacio@protonmail.com', role = c('cre', 'aut'))
+Description: A simple example of a shiny app that calls Plumber using Docker
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    shiny,
+    plumber,
+    threejs
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat

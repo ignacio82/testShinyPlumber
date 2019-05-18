@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    shinyapptest:
+      build: ./shiny
+      container_name: testshiny
+      image: testshiny
+      restart: unless-stopped
+      networks:
+            - backend
+      ports:
+          - 80:3838
+    testapi:
+      build: ./plumber
+      container_name: testapi
+      image: testapi
+      restart: unless-stopped
+      networks:
+            - backend
+networks:
+  backend:
+    external:
+      name: backend
+     
+      
+
