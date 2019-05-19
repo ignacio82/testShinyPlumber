@@ -1,13 +1,13 @@
 library(plumber)
-library(threejs)
 
-z <- seq(-10, 10, 0.01)
-x <- cos(z)
-y <- sin(z)
+#* @apiTitle Plumber Example API
 
-#* Returns threejs htmlwidget 
-#* @get /threejs
-#* @serializer htmlwidget
-threejs <- function(){
-  scatterplot3js(x,y,z, color=rainbow(length(z)))
+#* Echo back the input
+#* @param mean
+#* @param sd
+#* @get /rnorm
+function(mean = "0", sd = "sd") {
+  rnorm(n = 1000, mean = as.numeric(mean), sd = as.numeric(sd))
 }
+
+

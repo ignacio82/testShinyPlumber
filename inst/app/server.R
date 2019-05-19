@@ -1,10 +1,9 @@
 server <- function(input, output) {
-  # Set widget here
-  output$widget <- renderUI({
-    tags$iframe(
-      # this src location could be dynamic
-      src = "http://testapi:3098/threejs"
-    )
+  output$distPlot <- renderPlot({
+    x    <- testShinyPlumber::get_draws(mean = input$mean, sd = input$sd, host = "dockerizedapi")
+    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    hist(x, breaks = bins, col = 'darkgray', border = 'white')
   })
   
 }
+

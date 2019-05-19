@@ -9,10 +9,10 @@ services:
             - backend
       ports:
           - 80:3838
-    testapi:
+    dockerizedapi:
       build: ./plumber
-      container_name: testapi
-      image: testapi
+      container_name: dockerizedapi
+      image: dockerizedapi
       restart: unless-stopped
       networks:
             - backend

@@ -9,5 +9,5 @@
 #' }
 run_api <- function(){
   pr <- plumber::plumb(file = system.file("plumber.R", package="testShinyPlumber"))
-  pr$run(port = 3098, swagger = FALSE)
+  pr$run(host='0.0.0.0', port = 3098, swagger = FALSE)
 }

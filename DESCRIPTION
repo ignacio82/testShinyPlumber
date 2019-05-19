@@ -9,7 +9,9 @@ LazyData: true
 Imports: 
     shiny,
     plumber,
-    threejs
+    httr,
+    glue,
+    magrittr
 RoxygenNote: 6.1.1
 Suggests: 
     testthat
